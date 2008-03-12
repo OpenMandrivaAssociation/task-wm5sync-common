@@ -1,6 +1,3 @@
-%define version 1.0
-%define release %mkrel 1
-
 Name:		task-wm5sync-common
 Version:	1.0
 Release:	%{mkrel 1}
