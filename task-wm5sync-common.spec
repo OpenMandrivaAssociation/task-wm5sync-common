@@ -1,13 +1,12 @@
 Name:		task-wm5sync-common
 Version:	1.0
-Release:	%{mkrel 3}
+Release:	%{mkrel 4}
 Summary:	Metapackage for connecting to Windows Mobile 5+ devices
 Group:		Communications
 License:	GPLv2+
-Requires:	synce
+Requires:	synce-hal
 Requires:	sync-engine
-Requires:	odccm
-Requires:	libopensync-plugin-synce
+Requires:	synce-opensync-plugin
 Suggests:	libopensync-plugin-file
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
