@@ -1,6 +1,6 @@
 Name:		task-wm5sync-common
 Version:	1.0
-Release:	%{mkrel 4}
+Release:	%{mkrel 5}
 Summary:	Metapackage for connecting to Windows Mobile 5+ devices
 Group:		Communications
 License:	GPLv2+
@@ -26,12 +26,19 @@ Requires:	task-wm5sync-common
 Requires:	libopensync-plugin-kdepim
 Requires:	kdepim-kitchensync
 Requires:	synce-kpm
+Suggests:	synce-kio-rapip
 
 %description -n task-wm5sync-kde
 This package is a meta-package for connecting with Windows Mobile 5
 and later devices. It depends on all packages necessary for setting
 up a basic connection to the device and packages that are useful for
-synchronizing with KDE applications.
+synchronizing with KDE applications. It also depends on a package that
+will allow you to access the filesystem on your Windows Mobile device
+from KDE applications like Konqueror. This package is mainly intended
+for use with KDE 3, as synchronization with KDE 4's PIM applications
+is not yet possible. If you wish to use as much functionality as is
+currently available in KDE 4, install this package with urpmi's
+--no-suggests parameter, and then install the kde4-kio-rapip package.
 
 %package -n task-wm5sync-gnome
 Summary:	GNOME metapackage for connecting to Windows Mobile 5+
@@ -40,6 +47,7 @@ Requires:	task-wm5sync-common
 Requires:	libopensync-plugin-evolution2
 Requires:	multisync-gui
 Suggests:	synce-kpm
+Suggests:	synce-gvfs
 
 %description -n task-wm5sync-gnome
 This package is a meta-package for connecting with Windows Mobile 5
@@ -48,7 +56,10 @@ up a basic connection to the device and packages that are useful for
 synchronizing with GNOME applications. At present it also suggests the
 synce-kpm package, even though this is a Qt-based application, as it is
 clearly the best available application for graphically configuring
-partnerships and installing / removing software on these devices.
+partnerships and installing / removing software on these devices. It
+also depends on a package that will allow you to access the filesystem
+on your Windows Mobile device from any GVFS-compatible application
+(most GNOME applications).
 
 %files
 
