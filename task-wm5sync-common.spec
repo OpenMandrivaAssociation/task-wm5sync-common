@@ -1,6 +1,6 @@
 Name:		task-wm5sync-common
 Version:	1.0
-Release:	%{mkrel 6}
+Release:	%{mkrel 7}
 Summary:	Metapackage for connecting to Windows Mobile 5+ devices
 Group:		Communications
 License:	GPLv2+
